@@ -824,13 +824,7 @@ img {
   position: relative;
 }
 
-.slide {
-  display: none;
-}
 
-.slide-current {
-  display: block;
-}
 
 .page-catalog {
   display: grid;
@@ -1153,30 +1147,34 @@ img {
   background-repeat: no-repeat;
 }
 
-.site-wrapper {
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
   min-width: 1160px;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
-.site-wrapper-1 {
+.expensive {
   background-color: var(--basic-grey);
   background-image: url("../img/nerds-index-slide1.png");
 }
 
-.site-wrapper-2 {
+.math {
   background-color: var(--basic-grey);
   background-image: url("../img/nerds-index-slide2.png");
 }
 
-.site-wrapper-3 {
+.hardcore {
   background-color: var(--basic-grey);
   background-image: url("../img/slide3-hardcore.png");
 }
 
 .map {
   margin-top: 117px;
-  margin-left: 40px;
   position: relative;
   max-width: 100%;
   height: auto;
