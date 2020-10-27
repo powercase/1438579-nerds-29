@@ -121,6 +121,7 @@ img {
   display: flex;
   padding: 0px;
   margin: 0px;
+  flex-wrap: wrap;
 }
 
 .inner-main-header {
@@ -175,7 +176,6 @@ img {
   height: 2px;
   bottom: -13px;
   left: 0px;
-  display: block;
 }
 
 .about-company-btn {
@@ -192,7 +192,7 @@ img {
   padding-top: 17px;
   padding-bottom: 17px;
   font-weight: 500;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .about-company-btn:hover {
@@ -252,7 +252,7 @@ img {
   padding-top: 17px;
   padding-bottom: 17px;
   font-weight: 500;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .advantage-btn-red {
@@ -346,6 +346,11 @@ img {
   color: var(--red);
 }
 
+.filter {
+  cursor: pointer;
+}
+
+
 .filter-btn {
   background-color: var(--basic-grey);
   border-radius: 3px;
@@ -359,9 +364,10 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   border: none;
-  vertical-align: baseline;
+  vertical-align: middle;
     padding-bottom: 17px;
       padding-top: 17px;
+      cursor: pointer;
 }
 
 .filter-btn:hover {
@@ -392,6 +398,10 @@ img {
   opacity: 0.3;
 }
 
+.pagination {
+  display: flex;
+}
+
 .pagination-list {
   list-style: none;
   display: flex;
@@ -409,7 +419,7 @@ img {
   border: 3px solid var(--super-grey);
   border-radius: 3px;
   display: inline-block;
-  width: 50px;
+  min-width: 50px;
   height: 100%;
   margin-right: 11px;
   color: var(--black);
@@ -418,14 +428,14 @@ img {
   padding-top: 14px;
   padding-bottom: 14px;
   font-weight: 500;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .pagination-item {
   background-color: var(--basic-grey);
   border-radius: 3px;
   display: inline-block;
-  width: 50px;
+  min-width: 50px;
   height: 100%;
   margin-right: 11px;
   color: var(--black);
@@ -434,7 +444,7 @@ img {
   padding-top: 17px;
   padding-bottom: 17px;
   font-weight: 500;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .pagination-item-next {
@@ -442,7 +452,7 @@ img {
   border-radius: 3px;
   display: inline-block;
   height: 100%;
-  width: 260px;
+  min-width: 260px;
   color: var(--black);
   text-align: center;
   box-sizing: border-box;
@@ -450,7 +460,7 @@ img {
   padding-bottom: 17px;
   text-transform: uppercase;
   font-weight: 500;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .pagination-item-next:hover {
@@ -478,6 +488,7 @@ img {
 .sort-by {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0px;
   margin-top: 0;
   width: 760px;
@@ -498,7 +509,6 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  /* width: 134px; */
   margin: 0px;
   padding: 0px;
   vertical-align: top;
@@ -510,7 +520,7 @@ img {
   text-transform: uppercase;
   opacity: 0.3;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .sort-by-item:hover {
@@ -546,6 +556,15 @@ img {
   margin: 0px;
   padding: 0px;
   max-width: 420px;
+}
+
+.top-ten {
+  color: var(--antracit);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px;
+  padding: 0px;
+  max-width: 230px;
 }
 
 .slide-tagline {
@@ -630,7 +649,7 @@ img {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  margin-top: 70px;
+  margin-top: 75px;
   margin-bottom: 10px;
 }
 
@@ -671,7 +690,7 @@ img {
   position: absolute;
   width: 15px;
   height: 15px;
-  top: 2px;
+  top: 6px;
   right: 97px;
 }
 
@@ -775,8 +794,8 @@ img {
   display: block;
   content: "";
   width: 52px;
-  height: 2px;
-  top: 40px;
+  height: 1px;
+  top: 45px;
   right: -40px;
   transform: rotate(-90deg);
 }
@@ -860,21 +879,15 @@ img {
   height: auto;
 }
 
-/* .catalog-image {
-  display: block;
-  height: 100%;
-   width: auto;
-  position: relative;
-} */
 .catalog-block {
-  /* display: none; */
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 360px;
-  height: 231px;
+  min-width: 360px;
+  min-height: 231px;
   background-color: var(--basic-grey);
   border-radius: 3px;
+  display: none;
 }
 
 .catalog-item {
@@ -882,8 +895,12 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: block;
   height: 100%;
-   width: auto;
+  width: auto;
   position: relative;
+}
+
+.catalog-item:hover .catalog-block {
+  display: block;
 }
 
 .catalog-item::before {
@@ -896,6 +913,14 @@ img {
 
 .catalog-item:hover::before {
   opacity: 1.0;
+}
+
+.min-price {
+  cursor: pointer;
+}
+
+.max-price {
+    cursor: pointer;
 }
 
 .range-item {
@@ -963,6 +988,7 @@ img {
 .price-controls {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .price-controls label {
@@ -1102,6 +1128,24 @@ img {
   height: 23px;
 }
 
+.filter-input-radio+label:disabled::before {
+  content: url("../img/radio-off-disabled.svg");
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  width: 23px;
+  height: 23px;
+}
+
+.filter-input-checkbox+label:disabled::before {
+  content: url("../img/checkbox-off-disabled.svg");
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  width: 23px;
+  height: 23px;
+}
+
 .values {
   color: var(--antracit);
   font-size: 16px;
@@ -1176,8 +1220,13 @@ img {
 .map {
   margin-top: 117px;
   position: relative;
-  max-width: 100%;
-  height: auto;
+}
+
+
+.map-hidden {
+  position: absolute;
+z-index: -1;
+top: -15px;
 }
 
 .map::before {
@@ -1186,17 +1235,15 @@ img {
   display: block;
   content: "";
   width: 1158px;
-  height: 2px;
+  height: 1px;
   top: -80px;
-  left: 140px;
+  left: 180px;
 }
 
 .map-inner-page {
   margin-top: 62px;
   margin-left: 0px;
   position: relative;
-  max-width: 100%;
-  height: auto;
 }
 
 .illustration-width {
@@ -1254,7 +1301,7 @@ img {
   text-align: center;
   margin-left: 50px;
   margin-top: 37px;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 fieldset {
@@ -1289,6 +1336,23 @@ fieldset {
   height: 590px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.modal-show {
+  display: block;
+  position: fixed;
+  bottom: 80px;
+  left: 240px;
+  background-color: var(--white);
+  width: 960px;
+  height: 590px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+ animation: shake 0.6s;
+}
+
 
 .modal-text {
   font-weight: bold;
@@ -1389,7 +1453,7 @@ fieldset {
   margin-left: 100px;
   margin-top: 32px;
   border: none;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .pop-up-close {
@@ -1489,7 +1553,7 @@ fieldset {
   font-weight: 500;
   background-color: var(--basic-red);
   margin-left: 80px;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .catalog-price:hover {
@@ -1506,4 +1570,46 @@ fieldset {
 
 .icon-opacity:active path {
   fill: var(--black);
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
