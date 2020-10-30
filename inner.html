@@ -7,7 +7,7 @@
   <title>HTML Academy: Nerds</title>
   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  -->
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -64,24 +64,16 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar" style="
-               width: 30%;
-               margin-left: 20%
-             "></div>
+                    <div class="bar" style="width: 30%; margin-left: 20%"></div>
                   </div>
-                  <button type="button" class="toggle toggle-min" tabindex="0" style="
-             left: 20%
-           "></button>
-                  <div class="toggle toggle-max" tabindex="0" style="
-             left: 50%
-           "></div>
+                  <button type="button" class="toggle toggle-min" tabindex="0" style="left: 20%"></button>
+                  <button type="button" class="toggle toggle-max" tabindex="0" style="left: 50%"></button>
                 </div>
                 <div class="price-controls">
                   <label class="min-price">
                     от <input type="number" name="min-price" value="0">
                   </label>
-                  <label class="max-price">
-                    до <input type="number" name="max-price" value="15000">
+                  <label class="max-price">до <input type="number" name="max-price" value="15000">
                   </label>
                 </div>
               </div>
@@ -139,7 +131,7 @@
             <li><a class="sort-by-item">По типу</a></li>
             <li><a class="sort-by-item">По названию</a></li>
             <li class="icon-down"><a href=""><svg class="icon-opacity" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#ededed" d="M5.5 10L0 0h11" /></svg></a></li>
+                  <path fill=var(--black) d="M5.5 10L0 0h11" /></svg></a></li>
             <li class="icon-up-grey"><a href=""><svg class="icon-opacity" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L0 10H11L5.5 0Z" fill="#ededed" />
                 </svg>
@@ -320,6 +312,8 @@
       </form>
     </div>
   </div> <!-- class="page-body" -->
+  <script src="js/popup.min.js">
+  </script>
 </body>
 
 </html>

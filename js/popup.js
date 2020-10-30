@@ -22,10 +22,9 @@ btnLink.addEventListener("click", function(evt) {
   namePopup.focus();
 
   if (storage) {
-   namePopup.value = storage;
+    namePopup.value = storage;
 
- }
- else {
+  } else {
     emailPopup.focus();
   }
 
@@ -38,20 +37,19 @@ popupClose.addEventListener("click", function(evt) {
   modalPopup.classList.remove("modal-error");
 });
 
-popupForm.addEventListener("submit", function (evt) {
-   if (!namePopup.value || !emailPopup.value) {
-       evt.preventDefault();
-modalPopup.classList.remove("modal-error");
+popupForm.addEventListener("submit", function(evt) {
+  if (!namePopup.value || !emailPopup.value) {
+    evt.preventDefault();
+    modalPopup.classList.remove("modal-error");
     modalPopup.offsetWidth = modalPopup.offsetWidth;
-     modalPopup.classList.add("modal-error");
+    modalPopup.classList.add("modal-error");
 
-  }
-  else {
+  } else {
     localStorage.setItem("name", namePopup.value);
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     if (modalPopup.classList.contains("modal-show")) {
       evt.preventDefault();
